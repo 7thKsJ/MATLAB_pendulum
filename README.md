@@ -6,7 +6,7 @@
 메인으로 사용할 수 있는 함수는 크게 4종류 입니다.
 - [doublePend](doublePend.m) : 이중진자의 움직임과 모형을 알려줍니다.
 
-사용방법은 doublePend(m1, m2, l1, l2, theta1, theta2, g)로 단위는 kg, m, rad, m/s^2입니다
+사용방법은 doublePend(m1, m2, l1, l2, theta1, theta2, g, c1, c2)로 단위는 kg, m, rad, m/s^2입니다. c1, c2는 
 
 
 실행한다면
