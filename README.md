@@ -54,5 +54,10 @@ pendExact와 pendNotExact 모두 시뮬레이션을 한 뒤, 한 주기동안 �
 ![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2f7e5ebb-eeea-4391-94b2-46a58490a8a3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221113%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221113T085742Z&X-Amz-Expires=86400&X-Amz-Signature=f9d9922d4dc406e8d4cdf5f56b8537846763714c2eeba5de55615d95087834a2&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D"Untitled.png"&x-id=GetObject)
 
 - - -
-내장함수는 
+숨겨진 함수는 [returnM1](returnM1.m), [returnM2](returnM2.m), [drawAniPend](drawAniPend.m)입니다. 앞 두개는 l1, theta1, l2, theta2를 입력받았을때 이중진자의 진자 위치가 각각 어디일지를 알려주는 것이고, drawAniPend는 단진자 함수 pendExact와 pendNotExact에서 시간에 맞춰서 직접 점을 찍고 경로를 그리는 함수입니다.
+
+- - -
+시뮬레이션을 구현한 방법은 시간-점의 위치 관계로 되어있는 리스트를 받은 후, 하나하나씩 점을 찍고, 선을 그린 뒤, 시간에 맞춰 기다리고, 점과 선을 지우는 방식으로 되어있습니다.
+
+이중진자의 경우, 진자의 움직임을 트레이싱하기 위해 점 2개 선 2개를 그리고 그동안 지나온 점을 plot하고, 시간에 맞춰 기다리고, 점, 선, plot을 모두 지우는 방식으로 되어있습니다.
 
